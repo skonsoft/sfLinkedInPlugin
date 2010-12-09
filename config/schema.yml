@@ -1,0 +1,16 @@
+propel:
+  _attributes:    { package: plugins.sfLinkedInPlugin.lib.model }
+  
+  linkedin_token:
+    _attributes:    { phpName: sfLinkedInToken }
+    id:             ~
+    name:           { type: varchar, size: 255 }
+    token_key:      { type: clob }
+    token_secret:   { type: clob }
+    #user_id:        { type: integer, primaryKey: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
+    user_id:        { type: integer, primaryKey: true, foreignTable: member, foreignReference: id, onDelete: cascade }
+    expire_in:      { type: integer }
+    identifier:     { type: varchar, size: 255 }
+    status:         { type: varchar, size: 255 }
+    created_at:     ~
+    updated_at:     ~

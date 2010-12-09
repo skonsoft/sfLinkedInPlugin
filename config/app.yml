@@ -1,0 +1,6 @@
+all:
+  sf_linkedIn_plugin:
+    consumer_key: "your consumer key"
+    consumer_secret: "your consumer secret key"
+    back_url: "accessToken"
+    debug: on
